@@ -17,7 +17,7 @@ final readonly class CourseFinder
 	{
 		$course = $this->repository->search($id);
 
-		if ($course === null) {
+		if (null === $course) {
 			throw new CourseNotExist($id);
 		}
 
